@@ -112,20 +112,20 @@ describe 'Associatable' do
     let(:ned) { Human.find(3) }
     let(:ned_house) { House.find(2) }
 
-    it 'fetches `cats` from `Human`' do
-      expect(ned).to respond_to(:cats)
-      cats = ned.cats
+    # it 'fetches `cats` from `Human`' do
+    #   expect(ned).to respond_to(:cats)
+    #   cats = ned.cats
 
-      expect(cats.length).to eq(2)
+    #   expect(cats.length).to eq(2)
 
-      expected_cat_names = %w(Haskell Markov)
-      2.times do |i|
-        cat = cats[i]
+    #   expected_cat_names = %w(Haskell Markov)
+    #   2.times do |i|
+    #     cat = cats[i]
 
-        expect(cat).to be_instance_of(Cat)
-        expect(cat.name).to eq(expected_cat_names[i])
-      end
-    end
+    #     expect(cat).to be_instance_of(Cat)
+    #     expect(cat.name).to eq(expected_cat_names[i])
+    #   end
+    # end
 
     it 'fetches `humans` from `House`' do
       expect(ned_house).to respond_to(:humans)
